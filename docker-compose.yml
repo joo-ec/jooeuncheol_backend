@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db/bankdb
+      SPRING_DATASOURCE_USERNAME: bankdb
+      SPRING_DATASOURCE_PASSWORD: bankdb123!
+    depends_on:
+      - db
+  db:
+    image: postgres:14
+    container_name: jec-container
+    ports:
+      - "54326:5432"
+    environment:
+      POSTGRES_DB: bankdb
+      POSTGRES_USER: bankdb
+      POSTGRES_PASSWORD: bankdb123!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
