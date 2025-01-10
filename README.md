@@ -10,11 +10,11 @@
 - Docker Compose를 사용해 애플리케이션을 실행할 수 있는 환경을 제공해주세요.
 
 ## 과제 사용 기술
-- Java 17
-- Spring Boot & JPA (Hibernate)
-- Docker 및 Docker Compose
-- RESTful API 설계 및 구현
-- 
+- openJdk 17
+- Spring boot & JPA
+- postgresql 14
+- Docker, docker-compose
+
 ### 외부 라이브러리 및 오픈소스 사용 가능 (사용 목적 명시)
 - jwt - jwtToken을 사용하기 위해 사용
 - gson - DB와 통신하는 entity 값을 구분하여 요청에 따른 requestDTO,responseDTO의 필요한 값만 사용하기 위해 사용
@@ -24,7 +24,7 @@
 ## DB - ERD 
 ### DB 정보 - postgresql 14
 - IP : localhost
-- PORT : 5423
+- PORT : 54236
 - DB : bankdb
 - ID : bank
 - pw : bank123!
@@ -66,3 +66,7 @@ docker-compose up --build
     "token": "eyJhbGciOiJIUzUxMiJ9.eyJhZGRyZXNzIjoi7ISc7Jq4IOq4iOyynOq1rCDrlJTsp4DthLjroZw56ri4IDY4IiwiYXV0aG9yaXphdGlvbkNvZGUiOiJVU0VSIiwibmFtZSI6IuyCrOyaqeyekCIsImJyaXRoRGF0ZSI6IjIwMjUwMTAxIiwidHlwZSI6IkF1dGhvcml6YXRpb24iLCJ1c2VySWQiOiJ1c2VyIiwidGVsTm8iOiIwMDAwMDAwMDAwMCIsInVzZVN0YXR1cyI6IkNNTVVTRTAwMSIsInN1YiI6IkF1dGhvcml6YXRpb24iLCJpYXQiOjE3MzY0ODg0ODksImV4cCI6MTczNzgwMjQ4OX0.4-o1z7qS5B-bQ7DRxEM6-dpe4qERMQhorfQ-1r24T5O_ghu2SmtS5YQFaU-hpbwA9nQn1AUuJycTzYuTwZU3dQ"
 }
 ```
+
+## API-DOC
+- Swagger-UI 를 사용하여 API 명세서를 작성해 두었습니다.
+- [http://localhost:8080/swagger-ui](http://localhost:8080/swagger-ui/index.html#/)
